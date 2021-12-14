@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Site Unblocker</title>
+  </head>
+  <style>
+    
+    *{
+      text-align:center;
+      font-family: monospace;
+      color: white;
+    }
+
+    body{
+      background-color: black;
+    }
+
+    h1 {
+      font-size: 4vw;
+      text-decoration: underline;
+    }
+
+    h2 {
+      font-size: 20px;
+      text-align: bottom;
+    }
+
+    button{
+      text-align: center;
+      background-color: #84fab0;
+      padding: 8px;
+      border-style: none;
+      color: black;
+      font-size: 16px;
+      font-family: monospace;
+    }
+
+    button:hover{
+      filter: drop-shadow(0 0 0.1rem black);
+      animation: link 0.5s forwards;
+    }
+
+    @keyframes link {
+        from {background-color: #84fab0;}
+        to {background-color: #8fd3f4;}
+    }
+    input{
+      font-family: monospace;
+      padding: 8px;
+      font-size: 16px;
+      margin-right:0px;
+      border-style: none;
+      color: black;
+      text-align: left;
+    }
+
+    a{
+      font-size: 24px;
+    }
+
+    a:link {
+      color: #ccc;
+    }
+
+    a:visited {
+      color: #095484;
+    }
+
+  </style>
+  <body>
+    <h1>Unblock Anything</h1>
+    <input type="text" id="link" value="https://www.">
+    <button type="button"; onclick = "update()">Update Link</button>
+    <br><br><br>
+    <a href="#" ID="go">Unblocked Link</a>
+    <br><br>
+    <h2>About</h2>
+    <p>This site uses Google Translate as a proxy to access blocked sites, as the first layer.<br>Then, it exploits a feature of Securly, tricking it into thinking we're visiting a suicide prevention website. <br>There's a failsafe for this, and it allowes us through. <br>
+    If you get an error, try again later or use a different site. Not every site works with this.<br><br>Message me with questions on discord: Henry21#6630</p>
+    <br><br><br>
+    <h2>Henry Bass, 2021</h2>
+    
+  </body>
+  <script>
+    function update() {
+      var link = document.getElementById("link").value;
+      document.getElementById("go").href = "http://translate.google.com/translate?sl=en&tl=en&u=" + link + "?suicidepreventionlifeline.org";
+    }
+  </script>
+</html>
