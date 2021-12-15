@@ -4,73 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Site Unblocker</title>
+    <link rel="stylesheet" href="style.css">
   </head>
-  <style>
-    
-    *{
-      text-align:center;
-      font-family: monospace;
-      color: white;
-    }
 
-    body{
-      background-color: black;
-    }
-
-    h1 {
-      font-size: 4vw;
-      text-decoration: underline;
-    }
-
-    h2 {
-      font-size: 20px;
-      text-align: bottom;
-    }
-
-    button{
-      text-align: center;
-      background-color: #84fab0;
-      padding: 8px;
-      border-style: none;
-      color: black;
-      font-size: 16px;
-      font-family: monospace;
-    }
-
-    button:hover{
-      filter: drop-shadow(0 0 0.1rem black);
-      animation: link 0.5s forwards;
-    }
-
-    @keyframes link {
-        from {background-color: #84fab0;}
-        to {background-color: #8fd3f4;}
-    }
-    input{
-      font-family: monospace;
-      padding: 8px;
-      font-size: 16px;
-      margin-right:0px;
-      border-style: none;
-      color: black;
-      text-align: left;
-    }
-
-    a{
-      font-size: 24px;
-    }
-
-    a:link {
-      color: #ccc;
-    }
-
-    a:visited {
-      color: #095484;
-    }
-
-  </style>
   <body>
-    <h1>Unblock Anything</h1>
+    <h1>Site Unblocker</h1>
     <input type="text" id="link" value="">
     <button type="button"; onclick = "update()">Update Link</button>
     <br>
@@ -83,16 +21,13 @@
     <a href="#" ID="go">Unblocked Link</a><br>
     <br><br>
     <h2>About</h2>
-    <p>*Well, almost anything. Some sites break with the proxy, but this is the most unblocked you can get.<br>Just paste a url into the box, and update the link. Click "Unblocked Link" to get an unblocked version.<br>This site uses Google Translate as a proxy to access blocked sites, as the first layer.<br>Then, as the second layer it exploits a feature of Securly, tricking it into thinking we're visiting a suicide prevention website. 
+    <p>Unblocks most sites. Static sites and articles work best. Some sites break with the proxy, but this is the most unblocked you can get.<br>Just paste a url into the box, and update the link. Click "Unblocked Link" to get an unblocked version.<br>This site uses Google Translate as a proxy to access blocked sites, as the first layer.<br>Then, as the second layer it exploits a feature of Securly, tricking it into thinking we're visiting a suicide prevention website. 
      <br>There's a failsafe for this, and it allowes us through. <br>
-    If you get an error, try again later or use a different site. <br> Tested on Securly so far. Not every site works with this. Also, if you get flagged for suicide, (Unlikely), check "No exploit".<br<br>Message me with questions on discord: Henry21#6630</p>
-    <br><br><br>
-    <h2>Popular Sites:</h2>
+    If you get an error, try again later or use a different site. It may just be that the site has too much JS/CSS.<br> Tested on Securly so far. Not every site works with this. Also, if you get flagged for suicide, (Unlikely), check "No exploit".<br><br>Message me with questions on discord: Henry21#6630</p>
+    <br><br>
     
-    <li><a href="https://www-reddit-com.translate.goog/?suicidepreventionlifeline.org&_x_tr_sl=en&_x_tr_tl=en&_x_tr_hl=en-US">Reddit</a>
-    <li><a href="https://www-youtube-com.translate.goog/?suicidepreventionlifeline.org&_x_tr_sl=en&_x_tr_tl=en&_x_tr_hl=en-US">Youtube</a>
-    <li><a href="https://www-twitter-com.translate.goog/?suicidepreventionlifeline.org&_x_tr_sl=en&_x_tr_tl=en&_x_tr_hl=en-US">Twitter</a>
-    <li><a href="https://www-netflix-com.translate.goog/?suicidepreventionlifeline.org&_x_tr_sl=en&_x_tr_tl=en&_x_tr_hl=en-US">Netflix</a>
+    <h2>Want a list of working unblocked sites?</h2>
+    <a href="wiki.html">The Unblocked Wiki</a>
     <h2>Henry Bass, 2021</h2>
     <p>Tips (Doge) DJk2DqRE2B5FT9N9U85n5Ud9WETPRJa1yj<br>Thanks!
     </p>
@@ -105,6 +40,8 @@
 
       if (noproxy == false) {
         link = "http://translate.google.com/translate?sl=en&tl=en&u=" + link
+      } else if (link.indexOf("https://www.") <= 0) {
+        link = "https://www." + link
       }
 
       if (noexploit == false) {
