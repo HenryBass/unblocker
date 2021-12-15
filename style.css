@@ -1,0 +1,60 @@
+    *{
+      text-align:center;
+      font-family: monospace;
+      color: white;
+    }
+
+    body{
+      background-color: black;
+    }
+
+    h1 {
+      font-size: 4vw;
+      text-decoration: underline;
+    }
+
+    h2 {
+      font-size: 20px;
+      text-align: bottom;
+    }
+
+    button{
+      text-align: center;
+      background-color: #84fab0;
+      padding: 8px;
+      border-style: none;
+      color: black;
+      font-size: 16px;
+      font-family: monospace;
+    }
+
+    button:hover{
+      filter: drop-shadow(0 0 0.1rem black);
+      animation: link 0.5s forwards;
+    }
+
+    @keyframes link {
+        from {background-color: #84fab0;}
+        to {background-color: #8fd3f4;}
+    }
+    input{
+      font-family: monospace;
+      padding: 8px;
+      font-size: 16px;
+      margin-right:0px;
+      border-style: none;
+      color: black;
+      text-align: left;
+    }
+
+    a{
+      font-size: 24px;
+    }
+
+    a:link {
+      color: #ccc;
+    }
+
+    a:visited {
+      color: #095484;
+    }
