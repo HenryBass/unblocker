@@ -13,4 +13,6 @@ There's probably a legal reason for this. Securly allows you to suicide preventi
 
 *If you get an error, try again later or use a different site. Not every site works with this.*
 
-Though most should.
+Proxy breaks a lot of stuff.
+
+## https://henrybass.github.io/unblocker/
